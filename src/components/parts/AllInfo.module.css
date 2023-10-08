@@ -1,0 +1,23 @@
+.container{
+   display: flex;
+   justify-content: space-between;
+   min-height: 600px;
+   width: 1200px;
+   margin-top: 25px;
+}
+
+.container__info{
+   background-color: RGB(64, 64, 64);
+width: 650px; 
+border-radius: 15px;
+}
+
+.container__chat{
+   background-color: RGB(64, 64, 64);
+   width: 500px;
+   border-radius: 15px;
+}
+
+.txt{
+   color: rgb(255, 255, 255);
+}
