@@ -1,6 +1,6 @@
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
+// import { register } from 'redux/auth/operations';
 import css from './login_register.module.css';
-import { register } from 'redux/auth/operations';
 
 export const Register = () => {
    // форма з регістрацією
