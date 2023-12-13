@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { selectAllContacts } from 'redux/contacts/selectors';
-import { fetchContacts, deleteContact } from 'redux/contacts/operations';
-import { useDispatch, useSelector } from 'react-redux';
+// import React, { useEffect } from 'react';
+// import { selectAllContacts } from 'redux/contacts/selectors';
+// import { fetchContacts, deleteContact } from 'redux/contacts/operations';
+// import { useDispatch, useSelector } from 'react-redux';
 import css from './AllInfo.module.css';
 
 const questions = [
@@ -22,12 +22,12 @@ const massages = [
 
 export const AllInfo = () => {
    // тут дві колони, на яких будуть колонка з питаннями, і колонка з чатом
-   const dispatch = useDispatch();
-   const contacts = useSelector(selectAllContacts);
+   // const dispatch = useDispatch();
+   // const contacts = useSelector(selectAllContacts);
 
-   useEffect(() => {
-      dispatch(fetchContacts());
-   }, [dispatch]);
+   // useEffect(() => {
+   //    dispatch(fetchContacts());
+   // }, [dispatch]);
 
    // function changeFilter(e) {
    //    setFilter(e.currentTarget.value);
@@ -35,8 +35,8 @@ export const AllInfo = () => {
 
    // const normalizeFilter = filter.toLowerCase();
 
-   const visibleContacts =
-      contacts && contacts.filter(contact => contact.name.toLowerCase());
+   // const visibleContacts =
+   //    contacts && contacts.filter(contact => contact.name.toLowerCase());
 
    return (
       <main>
@@ -52,7 +52,7 @@ export const AllInfo = () => {
                      </li>
                   ))}
                </ul>
-               {visibleContacts &&
+               {/* {visibleContacts &&
                   visibleContacts.map(({ id, name, number }) => {
                      return (
                         <li key={id}>
@@ -64,14 +64,14 @@ export const AllInfo = () => {
                               N
                               onClick={e => {
                                  e.preventDefault();
-                                 dispatch(deleteContact(id));
+                                 // dispatch(deleteContact(id));
                               }}
                            >
                               delete
                            </button>
                         </li>
                      );
-                  })}
+                  })} */}
             </div>
             <div className={css.container__chat}>
                <p className={css.txt}>filter</p>
