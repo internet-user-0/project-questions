@@ -1,5 +1,4 @@
-import {Verification} from '../parts/Verification'
-
+import { Verification } from '../components/parts/Verification';
 
 export const VerificationPage = () => {
    return (

@@ -7,7 +7,8 @@ const isLoggedIn = true;
 // const isLoggedIn = false;
 
 export const SharedLayout = () => {
-   return (
+   // це верхньє меню, з аватаркою, імям. Іконки, які змінюють блок з потаннями
+   return ( 
       <div>
          {isLoggedIn ? (
             <header className={css.header}>
@@ -44,8 +45,8 @@ export const SharedLayout = () => {
                      </ul>
                      <div>
                      <ul className={css.info__user}>
-                        <li>face</li>
-                        <li>name-email</li>
+                        <li>free entrance</li>
+                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvn82rJPUdfH_Dx13qaeBNA5kC7m34nI2A&usqp=CAU" alt="avatar" width={50} /></li>
                      </ul>
                      <NavLink to="/">go back</NavLink>
                      </div>
