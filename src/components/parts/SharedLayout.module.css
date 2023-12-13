@@ -1,6 +1,6 @@
 .header {
-   height: 80px;
-   background-color: RGB(128, 0, 0);
+   height: 85px;
+   background-color: rgb(103, 37, 37);
 }
 
 .header__nav{
@@ -28,7 +28,7 @@ margin-right: 10px;
 .container {
    display: flex;
    align-items: center;
-   background-color: rgb(000, 000, 000);
+   background-color: rgb(27, 27, 27);
    height: 760px;
    flex-direction: column;
 }
@@ -37,6 +37,8 @@ margin-right: 10px;
 }
 
 .info__user{
+   display: flex;
+   align-items: center;
    padding: 0;
    margin: 0;
    list-style: none;

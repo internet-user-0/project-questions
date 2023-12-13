@@ -7,13 +7,13 @@
 }
 
 .container__info{
-   background-color: RGB(64, 64, 64);
+   background-color: rgb(50, 50, 50);
 width: 650px; 
 border-radius: 15px;
 }
 
 .container__chat{
-   background-color: RGB(64, 64, 64);
+   background-color: rgb(50, 50, 50);
    width: 500px;
    border-radius: 15px;
 }
