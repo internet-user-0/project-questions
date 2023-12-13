@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { selectAllContacts } from 'redux/contacts/selectors';
 import { fetchContacts, deleteContact } from 'redux/contacts/operations';
 import { useDispatch, useSelector } from 'react-redux';
@@ -36,10 +36,7 @@ export const AllInfo = () => {
    // const normalizeFilter = filter.toLowerCase();
 
    const visibleContacts =
-      contacts &&
-      contacts.filter(contact =>
-         contact.name.toLowerCase()
-      );
+      contacts && contacts.filter(contact => contact.name.toLowerCase());
 
    return (
       <main>
@@ -56,22 +53,25 @@ export const AllInfo = () => {
                   ))}
                </ul>
                {visibleContacts &&
-               visibleContacts.map(({ id, name, number }) => {
-                  return (
-                     <li  key={id}>
-                        <p>{name}: {number}{' '}</p>
-                        <button
-                           type="submit"N
-                           onClick={e => {
-                              e.preventDefault();
-                              dispatch(deleteContact(id));
-                           }}
-                        >
-                           delete
-                        </button>
-                     </li>
-                  );
-               })}
+                  visibleContacts.map(({ id, name, number }) => {
+                     return (
+                        <li key={id}>
+                           <p>
+                              {name}: {number}{' '}
+                           </p>
+                           <button
+                              type="submit"
+                              N
+                              onClick={e => {
+                                 e.preventDefault();
+                                 dispatch(deleteContact(id));
+                              }}
+                           >
+                              delete
+                           </button>
+                        </li>
+                     );
+                  })}
             </div>
             <div className={css.container__chat}>
                <p className={css.txt}>filter</p>
