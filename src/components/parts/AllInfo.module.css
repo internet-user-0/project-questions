@@ -1,23 +1,116 @@
-.container{
+.container {
+   height: 720px;
+   color: rgb(255, 255, 255);
+}
+
+.container__info {
    display: flex;
-   justify-content: space-between;
-   min-height: 600px;
-   width: 1200px;
-   margin-top: 25px;
-}
-
-.container__info{
    background-color: rgb(50, 50, 50);
-width: 650px; 
-border-radius: 15px;
+   width: auto;
+   height: 100%;
 }
 
-.container__chat{
+.questions{
+   background-color: rgb(40, 40, 40);
+   padding: 15px;
+}
+
+.ava{
+   width: 35px;
+   height: 35px;
+   background: red;
+   margin-right: 10px;
+   border-radius: 50%;
+}
+
+.questions__formfilter{
+   display: flex;
+}
+
+.questions__filter{
+   /* border-radius: 15px; */
+   border: 0;
+   height: 20px;
+   padding-left:10px ;
+}
+
+.questions__btn{
+   /* width: 25px;
+   height: 25px; */
+   /* border-radius: 50%; */
+   display: block;
+}
+/* .questions__arrow{
+   max-width: 20px;
+   max-height: 20px;
+} */
+.container__chat {
    background-color: rgb(50, 50, 50);
    width: 500px;
    border-radius: 15px;
 }
 
-.txt{
+.txt {
    color: rgb(255, 255, 255);
+}
+.listQuestion {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   width: 400px; 
+   height: 90%; 
+   overflow-y: auto; 
+   overflow-x: hidden; 
+   border-radius: 15px;
+}
+.listQuestion::-webkit-scrollbar {
+   width: 0px; 
+}
+
+.question {
+   margin: 5px 0 5px 0 ;
+   color: rgb(255, 255, 255);
+   background: rgb(60, 60, 60);
+   border-radius: 15px;
+   height: 70px;
+   padding: 5px;
+   overflow: hidden;
+}
+.question:hover {
+   min-height: 70px;
+   height: auto;
+   overflow: visible;
+}
+
+/* чат */
+.discussionSection {
+   margin-right: auto;
+}
+.discussionList{
+   height: 75%;
+   padding: 20px;
+   margin: 0;
+   list-style: none;
+   overflow-y: auto; 
+   overflow-x: hidden; 
+}
+.discussionList::-webkit-scrollbar {
+   width: 0px; 
+}
+.discussion {
+   margin: 5px 0 5px 0 ;
+   color: rgb(255, 255, 255);
+   background: rgb(60, 60, 60);
+   border-radius: 15px;
+   padding: 10px;
+}
+.discussionItem{
+   display: flex;
+   align-items: flex-end;
+}
+/* строка ввода сообщения */
+
+.sendMassage{
+   min-height: 100px;
+   min-width: 100px;
 }

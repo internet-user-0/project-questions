@@ -37,12 +37,12 @@ export const Login = () => {
                   <h1 className={css.txt}>Login</h1>
                   <form className={css.form} onSubmit={submit}>
                      <label>
-                        <p className={css.txt}>email</p>
-                        <input type="email" name="email" />
+                        <p className={css.txt}>Email</p>
+                        <input className={css.input} type="email" name="email" />
                      </label>
                      <label>
-                        <p className={css.txt}>password</p>
-                        <input type="password" name="password" />
+                        <p className={css.txt}>Password</p>
+                        <input className={css.input} type="password" name="password" />
                      </label>
                      <button className={css.btn_submit} type="submit">
                         submit

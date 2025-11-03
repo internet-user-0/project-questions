@@ -7,8 +7,8 @@ const isLoggedIn = true;
 // const isLoggedIn = false;
 
 export const SharedLayout = () => {
-   // це верхньє меню, з аватаркою, імям. Іконки, які змінюють блок з потаннями
-   return ( 
+   // це верхньє меню, з аватаркою, імям. Іконки, які змінюють блок з питаннями
+   return (
       <div>
          {isLoggedIn ? (
             <header className={css.header}>
@@ -18,19 +18,19 @@ export const SharedLayout = () => {
                         <li className={css.header__list_item}>
                            <button
                               onClick={e => {
-                                 console.log('click the 1 btn');
+                                 console.log('Q&A');
                               }}
                            >
-                              icon 1
+                              Q&A
                            </button>
                         </li>
                         <li className={css.header__list_item}>
                            <button
                               onClick={e => {
-                                 console.log('click the 2 btn');
+                                 console.log('Chats');
                               }}
                            >
-                              icon 2
+                              Chats
                            </button>
                         </li>
                         <li className={css.header__list_item}>
@@ -39,16 +39,25 @@ export const SharedLayout = () => {
                                  console.log('click the 3 btn');
                               }}
                            >
-                              icon 3
+                              icon
                            </button>
                         </li>
                      </ul>
                      <div>
-                     <ul className={css.info__user}>
-                        <li>free entrance</li>
-                        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdvn82rJPUdfH_Dx13qaeBNA5kC7m34nI2A&usqp=CAU" alt="avatar" width={50} /></li>
-                     </ul>
-                     <NavLink to="/">go back</NavLink>
+                        <ul className={css.info__user}>
+                           <li className={css.user_name}>@gmail.com</li>
+                           <li className={css.image_menu}>
+                              <img
+                              className={css.info_image}
+                                 src="https://www.meme-arsenal.com/memes/c03e7347881e6b8350eab44c1a487ac8.jpg"
+                                 alt="avatar"
+                                 width={50}
+                              />
+                              <div className={css.menu}>
+                              <NavLink to="/">go back</NavLink>
+                              </div>
+                           </li>
+                        </ul>
                      </div>
                   </nav>
                </div>

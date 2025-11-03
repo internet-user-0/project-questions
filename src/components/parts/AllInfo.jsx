@@ -2,22 +2,76 @@
 // import { selectAllContacts } from 'redux/contacts/selectors';
 // import { fetchContacts, deleteContact } from 'redux/contacts/operations';
 // import { useDispatch, useSelector } from 'react-redux';
+// import sprite from '../../images/icons/arrow-up2.svg'
 import css from './AllInfo.module.css';
 
 const questions = [
-   { textQuest: 'мой вопрос таков 1' },
-   { textQuest: 'мой вопрос таков 2' },
-   { textQuest: 'мой вопрос таков 3' },
-   { textQuest: 'мой вопрос таков 4' },
+   {
+      userName: '@name 1',
+      textQuest:
+         'question 1 Lorem ipsum dolor sit amet consectetur, lirdfdddddddddddddddddddddddddddddddddddddddddddddddd adipisicing elit. Nam molestias amet culpa nobis quaerat aliquid, ipsa molestiae itaque qui tempore voluptas pariatur consectetur porro alias minima, optio illo ullam! Cum!',
+   },
+   { userName: '@name 2', textQuest: 'question 2' },
+   { userName: '@name 3', textQuest: 'question 3' },
+   { userName: '@name 4', textQuest: 'question 4' },
+   {
+      userName: '@name 1',
+      textQuest:
+         'question 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam molestias amet culpa nobis quaerat aliquid, ipsa molestiae itaque qui tempore voluptas pariatur consectetur porro alias minima, optio illo ullam! Cum!',
+   },
+   { userName: '@name 2', textQuest: 'question 2' },
+   { userName: '@name 3', textQuest: 'question 3' },
+   { userName: '@name 4', textQuest: 'question 4' },
+   {
+      userName: '@name 1',
+      textQuest:
+         'question 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam molestias amet culpa nobis quaerat aliquid, ipsa molestiae itaque qui tempore voluptas pariatur consectetur porro alias minima, optio illo ullam! Cum!',
+   },
+   { userName: '@name 2', textQuest: 'question 2' },
+   { userName: '@name 3', textQuest: 'question 3' },
+   { userName: '@name 4', textQuest: 'question 4' },
+   {
+      userName: '@name 1',
+      textQuest:
+         'question 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam molestias amet culpa nobis quaerat aliquid, ipsa molestiae itaque qui tempore voluptas pariatur consectetur porro alias minima, optio illo ullam! Cum!',
+   },
+   { userName: '@name 2', textQuest: 'question 2' },
+   { userName: '@name 3', textQuest: 'question 3' },
+   { userName: '@name 4', textQuest: 'question 4' },
 ];
-const massages = [
-   { textMasage: 'сообщение 1' },
-   { textMasage: 'сообщение 2' },
-   { textMasage: 'сообщение 3' },
-   { textMasage: 'сообщение 4' },
-   { textMasage: 'сообщение 4' },
-   { textMasage: 'сообщение 4' },
-   { textMasage: 'сообщение 4' },
+const discussion = [
+   {
+      userName: '@name 1',
+      textQuest:
+         'question 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam molestias amet culpa nobis quaerat aliquid, ipsa molestiae itaque qui tempore voluptas pariatur consectetur porro alias minima, optio illo ullam! Cum!',
+   },
+   { userName: '@name 2', textQuest: 'question 2' },
+   { userName: '@name 3', textQuest: 'question 3' },
+   { userName: '@name 4', textQuest: 'question 4' },
+   {
+      userName: '@name 1',
+      textQuest:
+         'question 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam molestias amet culpa nobis quaerat aliquid, ipsa molestiae itaque qui tempore voluptas pariatur consectetur porro alias minima, optio illo ullam! Cum!',
+   },
+   { userName: '@name 2', textQuest: 'question 2' },
+   { userName: '@name 3', textQuest: 'question 3' },
+   { userName: '@name 4', textQuest: 'question 4' },
+   {
+      userName: '@name 1',
+      textQuest:
+         'question 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam molestias amet culpa nobis quaerat aliquid, ipsa molestiae itaque qui tempore voluptas pariatur consectetur porro alias minima, optio illo ullam! Cum!',
+   },
+   { userName: '@name 2', textQuest: 'question 2' },
+   { userName: '@name 3', textQuest: 'question 3' },
+   { userName: '@name 4', textQuest: 'question 4' },
+   {
+      userName: '@name 1',
+      textQuest:
+         'question 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam molestias amet culpa nobis quaerat aliquid, ipsa molestiae itaque qui tempore voluptas pariatur consectetur porro alias minima, optio illo ullam! Cum!',
+   },
+   { userName: '@name 2', textQuest: 'question 2' },
+   { userName: '@name 3', textQuest: 'question 3' },
+   { userName: '@name 4', textQuest: 'question 4' },
 ];
 
 export const AllInfo = () => {
@@ -38,20 +92,66 @@ export const AllInfo = () => {
    // const visibleContacts =
    //    contacts && contacts.filter(contact => contact.name.toLowerCase());
 
+   const search = e => {
+      e.preventDefault();
+      const form = e.currentTarget;
+      console.log(form.elements.message.value);
+   };
    return (
       <main>
          <div className={css.container}>
             <div className={css.container__info}>
-               <p className={css.txt}>filter</p>
-               <input type="text" />
-               <p className={css.txt}>info</p>
-               <ul>
-                  {questions.map((question, index) => (
-                     <li className={css.txt} key={index}>
-                        {question.textQuest}
-                     </li>
-                  ))}
-               </ul>
+               <div className={css.questions}>
+                  <form className={css.questions__formfilter} onSubmit={search}>
+                     <input
+                        name="message"
+                        className={css.questions__filter}
+                        type="text"
+                     />
+                     <button className={css.questions__btn} type="submit">
+                        {/* <svg className={css.questions__arrow}>
+                        <use href={sprite}></use>
+                        </svg> */}
+                        q&q
+                     </button>
+                  </form>
+                  <ul className={css.listQuestion}>
+                     {questions.map((question, index) => (
+                        <li className={css.question} key={index}>
+                           <div className={css.discussionItem}>
+                              <img
+                                 className={css.ava}
+                                 src="https://www.meme-arsenal.com/memes/c03e7347881e6b8350eab44c1a487ac8.jpg"
+                                 alt="ava"
+                              />
+                              {question.userName}
+                           </div>
+                           {question.textQuest}
+                        </li>
+                     ))}
+                  </ul>
+               </div>
+               {/* чат обсуждение */}
+               <section className={css.discussionSection}>
+                  <ul className={css.discussionList}>
+                     {discussion.map((question, index) => (
+                        <li className={css.discussion} key={index}>
+                           <div className={css.discussionItem}>
+                              <img
+                                 className={css.ava}
+                                 src="https://www.meme-arsenal.com/memes/c03e7347881e6b8350eab44c1a487ac8.jpg"
+                                 alt="ava"
+                              />
+                              {question.userName}
+                           </div>
+                           {question.textQuest}
+                        </li>
+                     ))}
+                  </ul>
+                  <div className={css.sendMassage}>
+                     <textarea name="message" cols="100" rows="5"></textarea>
+                  </div>
+               </section>
                {/* {visibleContacts &&
                   visibleContacts.map(({ id, name, number }) => {
                      return (
@@ -73,7 +173,7 @@ export const AllInfo = () => {
                      );
                   })} */}
             </div>
-            <div className={css.container__chat}>
+            {/* <div className={css.container__chat}>
                <p className={css.txt}>filter</p>
                <input type="text" />
                <p className={css.txt}>chat</p>
@@ -84,7 +184,7 @@ export const AllInfo = () => {
                      </li>
                   ))}
                </ul>
-            </div>
+            </div> */}
          </div>
       </main>
    );
